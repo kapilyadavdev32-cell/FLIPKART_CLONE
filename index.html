@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone - Online Shopping Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-text">Flipkart</span>
+                    <span class="logo-tagline">Explore <span class="plus">Plus</span></span>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for products, brands and more">
+                    <button id="searchBtn">🔍</button>
+                </div>
+                
+                <div class="nav-items">
+                    <button class="login-btn">Login</button>
+                    <a href="#" class="nav-link">Become a Seller</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">More</a>
+                    </div>
+                    <a href="#" class="nav-link cart">
+                        🛒 Cart <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="categories-bar">
+            <div class="categories-container">
+                <div class="category-item">
+                    <img src="src/daniel-korpai-hbTKIbuMmBI-unsplash.jpg" alt="Electronics">
+                    <span>Electronics</span>
+                </div>
+                <div class="category-item">
+                    <img src="src/khadeeja-yasser-dz9lOU2hdJY-unsplash.jpg" alt="Fashion">
+                    <span>Fashion</span>
+                </div>
+                <div class="category-item">
+                    <img src="src/kabir-cheema-vBdnsrIlueo-unsplash.jpg" alt="Home">
+                    <span>Home & Furniture</span>
+                </div>
+                <div class="category-item">
+                    <img src="src/victor-freitas-WvDYdXDzkhs-unsplash.jpg" alt="Sports">
+                    <span>Sports & Fitness</span>
+                </div>
+                <div class="category-item">
+                    <img src="src/valentina-sotnikova-DncuNoKueyU-unsplash.jpg" alt="Beauty">
+                    <span>Beauty & Personal Care</span>
+                </div>
+                <div class="category-item">
+                    <img src="src/elena-joland-oCdG2sTjDDQ-unsplash.jpg" alt="Toys">
+                    <span>Toys & Baby</span>
+                </div>
+                <div class="category-item">
+                    <img src="src/june-gathercole-CDt2jVuSkh4-unsplash.jpg" alt="Grocery">
+                    <span>Grocery</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="slider">
+                <div class="slides-container">
+                    <div class="slide active">
+                        <img src="src/carlos-macias-VsTINCD8GNI-unsplash.jpg" alt="Sale Banner 1">
+                        <div class="slide-content">
+                            <h2>Big Billion Days Sale</h2>
+                            <p>Up to 80% off on Electronics</p>
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="src/mediamodifier-ogmenj2NGho-unsplash.jpg" alt="Sale Banner 2">
+                        <div class="slide-content">
+                            <h2>Fashion Festival</h2>
+                            <p>Trendy styles at unbeatable prices</p>
+                            <button class="shop-now-btn">Explore</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="src/shamblen-studios-xwM61TPMlYk-unsplash.jpg" alt="Sale Banner 3">
+                        <div class="slide-content">
+                            <h2>Home Makeover Sale</h2>
+                            <p>Transform your space with up to 70% off</p>
+                            <button class="shop-now-btn">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+        </section>
+
+        <section class="deals-section">
+            <div class="section-header">
+                <h2>Deals of the Day</h2>
+                <button class="view-all-btn">VIEW ALL</button>
+            </div>
+            <div class="products-grid" id="dealsProducts">
+                <div class="product-card">
+                    <img src="src/maxim-hopman-Hin-rzhOdWs-unsplash.jpg" alt="Laptop">
+                    <h3>Laptops</h3>
+                    <p class="price">From ₹29,999</p>
+                    <p class="offer">Up to 40% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/c-d-x-PDX_a_82obo-unsplash.jpg" alt="Smartphone">
+                    <h3>Smartphones</h3>
+                    <p class="price">From ₹6,999</p>
+                    <p class="offer">Up to 50% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/logan-weaver-lgnwvr-fERtc6SsLVs-unsplash.jpg" alt="Headphones">
+                    <h3>Headphones</h3>
+                    <p class="price">From ₹999</p>
+                    <p class="offer">Up to 70% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/wesley-tingey-dKCKiC0BQtU-unsplash.jpg" alt="Smart Watch">
+                    <h3>Smart Watches</h3>
+                    <p class="price">From ₹1,499</p>
+                    <p class="offer">Up to 60% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/simon-weisser-phS37wg8cQg-unsplash.jpg" alt="Camera">
+                    <h3>Cameras</h3>
+                    <p class="price">From ₹19,999</p>
+                    <p class="offer">Up to 30% Off</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fashion-section">
+            <div class="section-header">
+                <h2>Fashion Top Deals</h2>
+                <button class="view-all-btn">VIEW ALL</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="src/klaudia-piaskowska-Zy6oNZRdcjc-unsplash.jpg" alt="Women's Fashion">
+                    <h3>Women's Clothing</h3>
+                    <p class="price">From ₹299</p>
+                    <p class="offer">50-80% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/odiseo-castrejon-xPPoMWL4r_A-unsplash.jpg" alt="Men's Fashion">
+                    <h3>Men's Clothing</h3>
+                    <p class="price">From ₹399</p>
+                    <p class="offer">40-70% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/derek-thomson-AJ-7QpXV9U4-unsplash.jpg" alt="Footwear">
+                    <h3>Footwear</h3>
+                    <p class="price">From ₹499</p>
+                    <p class="offer">Up to 60% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/dinh-ng-2Cc0KnE3lCs-unsplash.jpg" alt="Accessories">
+                    <h3>Accessories</h3>
+                    <p class="price">From ₹99</p>
+                    <p class="offer">Up to 85% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/hans-jurgen-weinhardt-FZ5nx86tP2U-unsplash.jpg" alt="Bags">
+                    <h3>Bags & Luggage</h3>
+                    <p class="price">From ₹599</p>
+                    <p class="offer">Up to 70% Off</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-essentials-section">
+            <div class="section-header">
+                <h2>Home Essentials</h2>
+                <button class="view-all-btn">VIEW ALL</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="src/krishna-chaitanya-kaluva--vB6Q1Omdko-unsplash.jpg" alt="Kitchen">
+                    <h3>Kitchen Appliances</h3>
+                    <p class="price">From ₹399</p>
+                    <p class="offer">Up to 55% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/june-gathercole-CDt2jVuSkh4-unsplash.jpg" alt="Home Decor">
+                    <h3>Home Decor</h3>
+                    <p class="price">From ₹149</p>
+                    <p class="offer">Up to 80% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/kabir-cheema-vBdnsrIlueo-unsplash.jpg" alt="Furniture">
+                    <h3>Furniture</h3>
+                    <p class="price">From ₹2,999</p>
+                    <p class="offer">Up to 70% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/valentina-sotnikova-DncuNoKueyU-unsplash.jpg" alt="Bedding">
+                    <h3>Bedding & Bath</h3>
+                    <p class="price">From ₹299</p>
+                    <p class="offer">Up to 65% Off</p>
+                </div>
+                <div class="product-card">
+                    <img src="src/elena-joland-oCdG2sTjDDQ-unsplash.jpg" alt="Storage">
+                    <h3>Storage Solutions</h3>
+                    <p class="price">From ₹199</p>
+                    <p class="offer">Up to 75% Off</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>ABOUT</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Flipkart Stories</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>HELP</h3>
+                <ul>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Cancellation & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report Infringement</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>POLICY</h3>
+                <ul>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SOCIAL</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Flipkart Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
