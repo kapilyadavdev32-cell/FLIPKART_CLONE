@@ -71,6 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Redirecting to all products...');
         });
     });
+    
+    // Initialize mobile touch gestures
+    handleSwipe();
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const navItems = document.querySelector('.nav-items');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        
+        if (window.innerWidth <= 480 && navItems.style.display === 'flex') {
+            if (!navItems.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navItems.style.display = 'none';
+            }
+        }
+    });
 });
 
 function addToCart(productCard) {
@@ -260,6 +275,52 @@ function handleLogin(event) {
     // Update login button to show user name
     const loginBtn = document.querySelector('.login-btn');
     loginBtn.textContent = 'User';
+}
+
+// Mobile menu functionality
+function toggleMobileMenu() {
+    const navItems = document.querySelector('.nav-items');
+    if (navItems.style.display === 'flex') {
+        navItems.style.display = 'none';
+    } else {
+        navItems.style.display = 'flex';
+        navItems.style.position = 'absolute';
+        navItems.style.top = '50px';
+        navItems.style.right = '10px';
+        navItems.style.background = 'white';
+        navItems.style.flexDirection = 'column';
+        navItems.style.padding = '10px';
+        navItems.style.borderRadius = '5px';
+        navItems.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+    }
+}
+
+// Open cart function for mobile
+function openCart() {
+    alert(`You have ${cartCount} items in your cart`);
+}
+
+// Touch-friendly swipe for mobile slider
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleSwipe() {
+    const slider = document.querySelector('.slider');
+    if (!slider) return;
+    
+    slider.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+    });
+    
+    slider.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].clientX;
+        if (touchStartX - touchEndX > 50) {
+            changeSlide(1);
+        }
+        if (touchEndX - touchStartX > 50) {
+            changeSlide(-1);
+        }
+    });
 }
 
 // Dynamic product loading simulation

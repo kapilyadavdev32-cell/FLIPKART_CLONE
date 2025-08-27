@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Flipkart Clone - Online Shopping Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,6 +12,7 @@
     <header>
         <nav class="navbar">
             <div class="nav-container">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
                 <div class="logo">
                     <span class="logo-text">Flipkart</span>
                     <span class="logo-tagline">Explore <span class="plus">Plus</span></span>
@@ -266,6 +269,32 @@
             <p>© 2025 Flipkart Clone. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <div class="mobile-nav-items">
+            <a href="#" class="mobile-nav-item">
+                <span>🏠</span>
+                Home
+            </a>
+            <a href="#" class="mobile-nav-item">
+                <span>📱</span>
+                Categories
+            </a>
+            <a href="#" class="mobile-nav-item">
+                <span>🔔</span>
+                Notifications
+            </a>
+            <a href="#" class="mobile-nav-item">
+                <span>👤</span>
+                Account
+            </a>
+            <a href="#" class="mobile-nav-item" onclick="openCart()">
+                <span>🛒</span>
+                Cart
+            </a>
+        </div>
+    </nav>
 
     <script src="script.js"></script>
 </body>
